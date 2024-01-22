@@ -93,5 +93,6 @@ button:active {
   }
   body {
     padding: 1rem;
+    margin: 2rem 1.5rem;
   }
 }
