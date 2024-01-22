@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+
+/* 
+ */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  --Bright-orange: hsl(31, 77%, 52%);
+  --Dark-cyan: hsl(184, 100%, 22%);
+  --Very-dark-cyan: hsl(179, 100%, 13%);
+  --Transparent-white: hsla(0, 0%, 100%, 0.75);
+  --Very-light-gray: hsl(0, 0%, 95%);
+}
+
+body {
+  padding: 3rem;
+  margin: 3rem;
+}
+.container {
+  display: flex;
+}
+img {
+  pointer-events: none;
+  user-select: none;
+}
+h1 {
+  font-family: "Big Shoulders Display", sans-serif;
+  margin: 1.5rem 0rem;
+  text-transform: uppercase;
+  color: var(--Very-light-gray);
+}
+.desc {
+  font-family: "Lexend Deca", sans-serif;
+  line-height: 1.5rem;
+  color: var(--Transparent-white);
+  font-size: 15px;
+}
+.left-part {
+  background-color: var(--Bright-orange);
+  padding: 3rem;
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+}
+.middle-part {
+  background-color: var(--Dark-cyan);
+  padding: 3rem;
+}
+.right-part {
+  background-color: var(--Very-dark-cyan);
+  padding: 3rem;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+button {
+  padding: 1rem;
+  border: none;
+  border-radius: 2rem;
+  margin-top: 5rem;
+  font-weight: 400;
+  background-color: var(--Very-light-gray);
+  user-select: none;
+}
+.left-part > button {
+  color: var(--Bright-orange);
+}
+.middle-part > button {
+  color: var(--Dark-cyan);
+}
+.right-part > button {
+  color: var(--Very-dark-cyan);
+}
+button:active {
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid white;
+  color: var(--Transparent-white);
+}
+@media screen and (max-width: 760px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+  .left-part {
+    border-bottom-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    border-bottom-left-radius: 0;
+  }
+  .right-part {
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+  }
+  body {
+    padding: 1rem;
+  }
+}
